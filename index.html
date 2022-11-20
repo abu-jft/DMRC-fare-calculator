@@ -7,95 +7,88 @@
     <title>DELHI METRO FARE CHECKING</title>
 </head>
 <body>
+    
+    <div align="center">
+<h1>DELHI METRO FARE CALCULATR</h1>
+
+    <label for="station-from">STATION FROM</label>
+    <select name="staion" id="station_from">
+        <option disabled hidden selected>Choose an option</option>
+        <option value="1">A</option>
+        <option value="2">B</option>
+        <option value="3">C</option>
+        <option value="4">D</option>
+        <option value="5">E</option>
+        <option value="6">F</option>
+        <option value="7">G</option>
+        <option value="8">H</option>
+        <option value="9">I</option>
+        <option value="10">J</option>
+        <option value="11">K</option>
+        <option value="12">L</option>
+        <option value="13">M</option>
+        <option value="14">N</option>
+        <option value="15">O</option>
+        <option value="16">P</option>
+        <option value="17">Q</option>
+        <option value="18">R</option>
+        <option value="19">S</option>
+        <option value="20">T</option>
+        <option value="21">U</option>
+        <option value="22">V</option>
+        <option value="23">W</option>
+        <option value="24">X</option>
+        <option value="25">Y</option>
+        <option value="26">Z</option>
+    </select><br>
+
+    <label for="station-to">STATION TO</label>
+    <select name="station" id="station_to">
+        <option disabled hidden selected>Choose an option</option>
+        <option value="1">A</option>
+        <option value="2">B</option>
+        <option value="3">C</option>
+        <option value="4">D</option>
+        <option value="5">E</option>
+        <option value="6">F</option>
+        <option value="7">G</option>
+        <option value="8">H</option>
+        <option value="9">I</option>
+        <option value="10">J</option>
+        <option value="11">K</option>
+        <option value="12">L</option>
+        <option value="13">M</option>
+        <option value="14">N</option>
+        <option value="15">O</option>
+        <option value="16">P</option>
+        <option value="17">Q</option>
+        <option value="18">R</option>
+        <option value="19">S</option>
+        <option value="20">T</option>
+        <option value="21">U</option>
+        <option value="22">V</option>
+        <option value="23">W</option>
+        <option value="24">X</option>
+        <option value="25">Y</option>
+        <option value="26">Z</option>
+    </select><br>
+
+    <label for="payment-method">PAYMENT METHOD</label>
+    <select name="Payment Method" id="payment_method">
+        <option disabled hidden selected>Choose an option</option>
+        <option value="card">CARD</option>
+        <option value="token">TOKEN</option>
+    </select>
+       
+    <br>
+    <button onclick="onClick()">CALCULATE FARE</button>
+    <br>
+
+    <output id="output"></output>
     <script src="/DMRC/index.js"></script>
 
-    <h1>DELHI METRO FARE CALCULATR</h1>
-     <div>
-        <form>
-            <label for="station-from">STATION FROM</label>
-            <select name="staion" id="station_from">
-                <option disabled hidden selected>Choose an option</option>
-                <option value="1">A</option>
-                <option value="2">B</option>
-                <option value="3">C</option>
-                <option value="4">D</option>
-                <option value="5">E</option>
-                <option value="6">F</option>
-                <option value="7">G</option>
-                <option value="8">H</option>
-                <option value="9">I</option>
-                <option value="10">J</option>
-                <option value="11">K</option>
-                <option value="12">L</option>
-                <option value="13">M</option>
-                <option value="14">N</option>
-                <option value="15">O</option>
-                <option value="16">P</option>
-                <option value="17">Q</option>
-                <option value="18">R</option>
-                <option value="19">S</option>
-                <option value="20">T</option>
-                <option value="21">U</option>
-                <option value="22">V</option>
-                <option value="23">W</option>
-                <option value="24">X</option>
-                <option value="25">Y</option>
-                <option value="26">Z</option>
-            </select><br>
 
-            <label for="station-to">STATION TO</label>
-            <select name="station" id="station_to">
-                <option disabled hidden selected>Choose an option</option>
-                <option value="1">A</option>
-                <option value="2">B</option>
-                <option value="3">C</option>
-                <option value="4">D</option>
-                <option value="5">E</option>
-                <option value="6">F</option>
-                <option value="7">G</option>
-                <option value="8">H</option>
-                <option value="9">I</option>
-                <option value="10">J</option>
-                <option value="11">K</option>
-                <option value="12">L</option>
-                <option value="13">M</option>
-                <option value="14">N</option>
-                <option value="15">O</option>
-                <option value="16">P</option>
-                <option value="17">Q</option>
-                <option value="18">R</option>
-                <option value="19">S</option>
-                <option value="20">T</option>
-                <option value="21">U</option>
-                <option value="22">V</option>
-                <option value="23">W</option>
-                <option value="24">X</option>
-                <option value="25">Y</option>
-                <option value="26">Z</option>
-            </select><br>
-
-            <label for="payment-method">PAYMENT METHOD</label>
-            <select name="Payment Method" id="payment_method">
-                <option disabled hidden selected>Choose an option</option>
-                <option value="false">CARD</option>
-                <option value="true">TOKEN</option>
-            </select>
-
-
-            <!-- <p><button class="button" type="button">CALCULATE</button></p>
-           <br>
-           FINAL PRICE Rs. <output name="finalprice" for=""></output> -->
-
-           <button id="Calculate_Fare">CALCULATE FARE</button>
-           <br>
-
-           <!-- FINAL PRICE Rs. <output name="finalprice" for=""></output> -->
-
-           <div id="output"></div>
-
-        </form>
-    </div>
-
+</div>
 
 </body>
 </html>
